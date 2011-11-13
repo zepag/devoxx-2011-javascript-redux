@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>Javascript Redux</title>
+
+    <meta charset='utf-8'>
+    <script src='javascript/slides.js'></script>
+  </head>
+  
+  <style>
+   
+    
+  </style>
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-devoxx'>
+      
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+
+      <article class="fill">
+        <p>
+			<img class="background" src='images/devoxx-background.jpg' />
+		</p>
+		<h1>
+          Javascript Redux
+        </h1>
+		<p>
+          Pierre-Antoine Grégoire
+          <br>
+          Devoxx 2011, November 15th
+        </p>
+		<div class="source white">
+			Images when sourced (except for Devoxx pics)<br> are under Creative Commons <img src="" />.
+		  </div>
+      </article>
+      <article class="fill">
+		<h3 class="title">
+          From the darkness of history...
+        </h3>
+		<p>
+          <img class="background" src='images/moon.jpg' />
+        </p>
+        <div class="build">
+			<span><img src='images/paul-kenton-urban-mocha.jpg' style="height:50%;"/></span>
+			<span><img src='images/livescript.jpg' style="height:50%;"/></span>
+			<span><img src='images/javascript.png' style="height:50%;"/></span>
+			<span><img src='images/ecmascript.jpg' style="height:30%;"/></span>
+		</div>
+ 		<div class='source white'>
+          Source: Nick C. http://www.flickr.com/photos/35077273@N06/4312923500/
+        </div>
+	  </article>
+	  <article class="fill">
+		<h3 class="title">
+		  ...through the mist of the early millenium...
+        </h3>
+		<p>
+          <img class="background" src='images/mist.jpg' />
+        </p>
+		<h4 class="title">Away from the server side...</h4>
+		<div class="build">
+			<span><img src='images/netscape-vs-ie.jpg' style="height:20%;"/></span>
+			<span><img src='images/internet-explorer_winner.jpg' style="height:50%;"/></span>
+			<span><img src='images/dhtml_diagram.gif' style="height:50%;"/></span>
+		</div>
+ 		<div class='source white'>
+          Source: Rod Brazier http://www.flickr.com/photos/learningful/2354756786/
+        </div>
+	  </article>
+	<article class="fill">
+		<h3 class="title">
+		  ...through the mist of the early millenium...
+        </h3>
+		<p>
+          <img class="background" src='images/mist.jpg' />
+        </p>
+		<p class='contrasted padded'>Server-side HTML generation ASP/PHP/JSP/CGI == TAG SOUP</p>
+		<div class="build">
+			<span><img src='images/tag-soup.jpg' style="height:70%;"/></span>
+		</div>
+ 		<div class='source white'>
+          Source: Rod Brazier http://www.flickr.com/photos/learningful/2354756786/
+        </div>
+	  </article>
+	<article class="fill">
+		<h3 class="title">
+		  ...to the dawn of Javascript hegemony!	
+		</h3>
+		<p>
+          <img class="background" src='images/dawn.jpg' />
+        </p>       
+ 		<div class="build">
+			<span class="contrasted"><img src='images/json.png' style="height:70%;"/></span>
+			<span><img src='images/crockford.jpg' style="height:70%;"/></span>
+			<span><img src='images/ajax.png' style="height:20%;"/></span>
+		</div>
+		<div class='source white'>
+          Source: Rob Warde http://www.flickr.com/photos/tidymind/3956154754/
+        </div>
+	  </article>
+	<article class="fill">
+		<h3 class="title">
+		  ...to the dawn of Javascript hegemony!	
+		</h3>
+		<p>
+          <img class="background" src='images/dawn.jpg' />
+        </p>
+		<h4 class="title">Javascript Interpreters => Javascript Engines</h4>
+ 		<div class="build">
+			<ul class="build">
+				<li class="contrasted padded">SpiderMonkey => Netscape</li>
+				<li class="contrasted padded">Rhino => Sun Microsystems/Netscape</li>
+				<li class="contrasted padded">*Monkey (TraceMonkey,JägerMonkey) => Mozilla</li>
+				<li class="contrasted padded">Carakan => Opera</li>
+				<li class="contrasted padded">V8 => Chrome</li>
+				<li class="contrasted padded">SquirrelFish/Nitro => Safari</li>
+				<li class="contrasted padded">Chakra => IE9</li>
+			</ul>
+		</div>
+		
+		<div class='source white'>
+          Source: Rob Warde http://www.flickr.com/photos/tidymind/3956154754/
+        </div>
+	  </article>
+	  <article class="fill">
+		<h3 class="title">
+		  ...to the dawn of Javascript hegemony!	
+		</h3>
+		<p>
+          <img class="background" src='images/dawn.jpg' />
+        </p>
+		<h4 class="title">Javascript: Norms and standards</h4>
+		<div class="build">
+			<ul class="build">
+				<li class="contrasted padded">EcmaScript: ES5, ESHarmony</li>
+				<li class="contrasted padded">CommonJS (http://www.commonjs.org/) Modules, Packages, System</li>
+			</ul>
+			<h4 class="title">Javascript: Server-side</h4>
+			<ul class="build">
+				<li class="contrasted padded">NodeJS (V8), RingoJS (Rhino), EJScript, Persevere (Rhino), Narwhal(Nitro/Rhino), AppEngineJS (RingoJS,Narwhal) ...etc</li>
+			</ul>
+		</div>
+		<div class='source white'>
+          Source: Rob Warde http://www.flickr.com/photos/tidymind/3956154754/
+        </div>
+	  </article>
+	  <article>
+        <h3 class="title">
+          Javascript: in 3 slides 1/3
+        </h3>
+		<p>
+        	Object Literals (JSON is a subset)
+        </p>
+		<section>
+        <pre>
+var empty_object = {}; // easy isn't it?
+var devoxx_guy = {
+	"first_name": "Stephan",
+	"last_name": "Janssen",
+	"@twitter": "@Stephan007"
+}; // objects are mutable keyed collections (maps)
+var javascript_reduxx ={
+	"presentation_title": "Javascript REDUX",
+	"date": "15/11/2011",
+	"time": {"start": "13h00","end": "13h15"},
+	"speaker":{"first_name": "Pierre-Antoine","last_name": "Grégoire","@twitter_account": "@zepag"}
+}; // objects can be nested
+// . notation for value retrieval
+var stephan = devoxx_guy.last_name;
+// [ ] notation if key is not legal Javascript name or reserved word
+var spkr_twitter = javascript_redux.speaker["@twitter"];</pre>
+		</section>
+      </article>
+	<article>
+        <h3 class="title">
+          Javascript: in 3 slides 2/3
+        </h3>
+		<p>
+        	Functions as first class citizen:
+        </p>
+		<section>
+        <pre>
+var add = function(a,b) {return a + b;}; // functions can be stored in variables
+var sum = add(1,2); // and invoked further on</pre>
+		</section>
+		<p>
+        	Function invocation patterns affect 'this'
+        </p>
+		<section>
+        <pre>
+// function invocation pattern
+kick_the_cat_out(cat); // method invoked directly
+// !!! reckless. this===global object (window in browser DOM) 
+// method invocation pattern
+cat.meow(3/*times*/); // meow is a property of cat. this===cat 
+// constructor invocation pattern
+new Cat(); // 'new' keyword is used. this === new Object
+// apply invocation pattern
+cat.meow.apply(dog,[3]);
+// powerful, explicit assignment of this can make a dog meow ;)
+</pre>
+		</section>
+      </article>
+	  <article>
+        <h3 class="title">
+          Javascript: in 3 slides 3/3
+        </h3>
+		<span>Closure</span>
+		<pre>
+var myObject = (function(){
+	// 'private' to function scope
+	var value = 0;
+	return{ // returned object's function have access through Closure
+		increment = function (inc) {
+			value += typeof inc === 'number'? inc:1;
+		},
+		getValue = function () { return value;}
+	};
+}());// anonymous function immediately invoked </pre>
+		<ul>
+			<li>Modules, Cascade (fluent API style), Curry, Memoization...etc</li>
+			<li>No need for named parameters, pass an Object literal:
+				<pre>
+var result=createAUser({first_name:"David",last_name:"Crockford"});</pre>
+			</li>
+		</ul>
+      </article>
+	  <article>
+        <h3 class="title">Node.JS</h3>
+		<p>An example of a web server written in Node which responds with "Hello World" for every request.</p>
+
+		<pre>var http = require('http');
+http.createServer(function (req, res) {
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	res.end('Hello World\n');
+}).listen(1337, "127.0.0.1");
+console.log('Server running at http://127.0.0.1:1337/');</pre>
+		<p>To run the server, put the code into a file example.js and execute it with the node program:</p>
+
+		<pre>% node example.js
+		Server running at http://127.0.0.1:1337/</pre>
+		<p>
+			https://github.com/joyent/node/wiki/modules<br>
+			http://toolbox.no.de/
+		</p>
+      </article>
+	  <article>
+        <h3 class="title">Demo: description</h3>
+		<h4>Multiplayer websocket demo</h4>
+		<ul>
+			<li>NodeJS Runtime</li>
+			<li>NodeJS Module: Socket.IO: Websocket-like API server</li>
+			<li>Browser script: Socket.IO.client: Websocket-like API client</li>
+		</ul>
+		<h4>Requires NodeJS installed and socket.io</h4>
+		<pre>
+% npm install socket.io
+% node game/server/game.js
+   info  - socket.io started
+		</pre>
+		<span>Refresh this slideshow page when node is started</span>
+		<p class="source black">http://rawkes.com/blog/2011/11/06/creating-a-real-time-multiplayer-game-with-websockets-and-node.js</p>
+      </article>
+      <article>
+        <h3 class="title">Demo: Live!</h3>
+        <iframe src='game/client/index.html'></iframe>
+      </article>
+	  <article>
+        <h3 class="title">Demo: Live 2!</h3>
+        <iframe src='game/client/index.html'></iframe>
+      </article>
+      <article>
+        <h3 class="title">
+          Thank you! Questions?
+        </h3>
+		<br>
+		<br>
+		<pre>
+// eluding Devoxx,Person and Speaker ;)
+var likedIt = function(person){return person.likedIt()?person:false};
+var me =new Speaker({
+	"first_name": "Pierre-Antoine",
+	"last_name": "Grégoire",
+	"@twitter_account": "@zepag",
+});
+me.feels("Proud to be here");
+var you = Devoxx.attendees({"roomNo":9,"time":"15/11/2011 13h15"});
+var result=you.map(likedIt);
+me.hopes(result.length > 0); // ;)
+		</pre>
+      </article>
+
+    </section>
+
+  </body>
+</html>
