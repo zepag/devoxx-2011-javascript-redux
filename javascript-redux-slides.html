@@ -40,13 +40,26 @@
           Javascript Redux
         </h1>
 		<p>
-          Pierre-Antoine Grégoire
+          Pierre-Antoine Grégoire (@zepag)
           <br>
           Devoxx 2011, November 15th
         </p>
 		<div class="source white">
 			Images when sourced (except for Devoxx pics)<br> are under Creative Commons <img src="" />.
 		  </div>
+      </article>
+	  <article>
+        <h3 class="title">
+          Download this quickie:
+        </h3>
+		<br><br>
+		<a href="https://github.com/zepag/devoxx-2011-javascript-redux">https://github.com/zepag/devoxx-2011-javascript-redux</a><br><br>
+		Only requirements:
+		<ul>
+			<li>Chrome (recent version) to watch the slides</li>
+			<li>NodeJS > 0.4.12 installed</li>
+			<li>Follow the guide</li>
+		</ul>
       </article>
       <article class="fill">
 		<h3 class="title">
@@ -226,10 +239,8 @@ var myObject = (function(){
 	// 'private' to function scope
 	var value = 0;
 	return{ // returned object's function have access through Closure
-		increment = function (inc) {
-			value += typeof inc === 'number'? inc:1;
-		},
-		getValue = function () { return value;}
+	increment : function (inc) { (value += typeof inc === 'number'? inc:1);},
+	getValue : function () { return value;}
 	};
 }());// anonymous function immediately invoked </pre>
 		<ul>
@@ -304,8 +315,19 @@ var result=you.map(likedIt);
 me.hopes(result.length > 0); // ;)
 		</pre>
       </article>
-
+	<article>
+        <h3 class="title">
+          Additional content: references
+        </h3>
+		<h4>Brendan Eich:</h4>
+		<a href="http://www.brendaneich.com">http://www.brendaneich.com</a><br>
+		<h4>Douglas Crockford:</h4>
+		<a href="http://www.crockford.com">http://www.crockford.com</a> | <a href="http://www.json.org">http://www.json.org</a> | <a href="http://shop.oreilly.com/product/9780596517748.do">Javascript, The Good Parts</a>
+		<h4>JSConf.EU:</h4>
+		<a href="http://jsconf.eu/2011/">Nice videos</a>
+		<h4>Ecmascript</h4>
+		<a href="http://www.ecmascript.org/">http://www.ecmascript.org/</a>
+      </article>
     </section>
-
   </body>
 </html>
